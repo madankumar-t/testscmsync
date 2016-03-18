@@ -5,7 +5,5 @@
   <noUserCommitMessage>false</noUserCommitMessage>
   <displayStatus>true</displayStatus>
   <commitMessagePattern>[message]</commitMessagePattern>
-  <manualSynchronizationIncludes>
-    <include>/var/lib/jenkins/jobs</include>
-  </manualSynchronizationIncludes>
+  <manualSynchronizationIncludes/>
 </hudson.plugins.scm__sync__configuration.ScmSyncConfigurationPlugin>
