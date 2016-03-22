@@ -15,7 +15,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;test machine&quot;</command>
+      <command>echo &quot;test machine, this job edited from git&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
