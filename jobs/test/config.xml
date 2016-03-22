@@ -18,6 +18,25 @@
         <primaryOwnerId>admin</primaryOwnerId>
         <coownersIds class="sorted-set"/>
       </ownership>
+      <itemSpecificSecurity>
+        <permissionsMatrix>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:user1</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:user1</permission>
+          <permission>hudson.model.Item.Read:user1</permission>
+          <permission>hudson.model.Item.Workspace:user1</permission>
+          <permission>hudson.model.Item.Configure:user1</permission>
+          <permission>hudson.model.Run.Delete:user1</permission>
+          <permission>hudson.model.Item.Discover:user1</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:user1</permission>
+          <permission>hudson.model.Item.Build:user1</permission>
+          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs:user1</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:user1</permission>
+          <permission>hudson.model.Item.Cancel:user1</permission>
+          <permission>hudson.model.Item.Delete:user1</permission>
+          <permission>hudson.model.Run.Update:user1</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
+        </permissionsMatrix>
+      </itemSpecificSecurity>
     </com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
