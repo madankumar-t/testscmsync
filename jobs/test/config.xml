@@ -16,7 +16,9 @@
       <ownership>
         <ownershipEnabled>true</ownershipEnabled>
         <primaryOwnerId>admin</primaryOwnerId>
-        <coownersIds class="sorted-set"/>
+        <coownersIds class="sorted-set">
+          <string>user1</string>
+        </coownersIds>
       </ownership>
       <itemSpecificSecurity>
         <permissionsMatrix>
