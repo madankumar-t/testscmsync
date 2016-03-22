@@ -46,6 +46,12 @@
         </assignedSIDs>
       </role>
     </roleMap>
+    <roleMap type="slaveRoles">
+      <role name="DevOpsadmin" pattern="Create&#x9;Delete&#x9;ManageDomains&#x9;Update&#x9;View&#x9;Build&#x9;Configure&#x9;Connect&#x9;Delete&#x9;Disconnec">
+        <permissions/>
+        <assignedSIDs/>
+      </role>
+    </roleMap>
     <roleMap type="projectRoles">
       <role name="projectadmin" pattern="Build&#x9;Cancel&#x9;Configure&#x9;Create&#x9;Delete&#x9;Discover&#x9;Read&#x9;Workspace&#x9;">
         <permissions/>
