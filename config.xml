@@ -64,7 +64,7 @@
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$PatternProjectNamingStrategy">
-    <namePattern>(?:[.\-][a-z0-9]+)*</namePattern>
+    <namePattern>[A-Z][a-z]*\.?\s+[a-z][a-z]+(\s*[a-z]+)*</namePattern>
     <description></description>
     <forceExistingJobs>false</forceExistingJobs>
   </projectNamingStrategy>
