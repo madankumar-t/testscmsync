@@ -35,8 +35,8 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:user1</permission>
           <permission>hudson.model.Item.Cancel:user1</permission>
           <permission>hudson.model.Item.Delete:user1</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
           <permission>hudson.model.Run.Update:user1</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
         </permissionsMatrix>
       </itemSpecificSecurity>
     </com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty>
@@ -49,6 +49,19 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders/>
-  <publishers/>
+  <publishers>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.11">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>HTML Report</reportName>
+          <reportDir></reportDir>
+          <reportFiles>index.html</reportFiles>
+          <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
+          <keepAll>false</keepAll>
+          <allowMissing>false</allowMissing>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
+  </publishers>
   <buildWrappers/>
 </project>
