@@ -35,8 +35,8 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:user1</permission>
           <permission>hudson.model.Item.Cancel:user1</permission>
           <permission>hudson.model.Item.Delete:user1</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
           <permission>hudson.model.Run.Update:user1</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
         </permissionsMatrix>
       </itemSpecificSecurity>
     </com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty>
@@ -87,5 +87,7 @@ echo &quot; GIT_TAG_MESSAGE $GIT_TAG_MESSAGE&quot;</command>
       </reportTargets>
     </htmlpublisher.HtmlPublisher>
   </publishers>
-  <buildWrappers/>
+  <buildWrappers>
+    <com.google.jenkins.plugins.gitnotes.GitNotesJobLogger plugin="google-git-notes-publisher@0.3"/>
+  </buildWrappers>
 </project>
