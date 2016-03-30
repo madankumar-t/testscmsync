@@ -35,20 +35,43 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:user1</permission>
           <permission>hudson.model.Item.Cancel:user1</permission>
           <permission>hudson.model.Item.Delete:user1</permission>
-          <permission>hudson.model.Run.Update:user1</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
+          <permission>hudson.model.Run.Update:user1</permission>
         </permissionsMatrix>
       </itemSpecificSecurity>
     </com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty>
   </properties>
-  <scm class="hudson.scm.NullSCM"/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/tmadan/testgit.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <org.jenkinsci.plugins.gittagmessage.GitTagMessageExtension plugin="git-tag-message@1.4"/>
+    </extensions>
+  </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo &quot; GIT_TAG_NAME $GIT_TAG_NAME&quot;
+
+echo &quot; GIT_TAG_MESSAGE $GIT_TAG_MESSAGE&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
   <publishers>
     <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.11">
       <reportTargets>
