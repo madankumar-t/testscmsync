@@ -72,7 +72,55 @@
   <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
-  <clouds/>
+  <clouds>
+    <hudson.plugins.ec2.EC2Cloud plugin="ec2@1.31">
+      <name>ec2-testec2</name>
+      <useInstanceProfileForCredentials>false</useInstanceProfileForCredentials>
+      <accessId>AKIAJFHNM2TZX4X3WRQQ</accessId>
+      <secretKey>NytljU/FtbUa4nCQhPIW3DzlurDhCxxaKIQwAGFqDb2Vo3cHxWvbj8hGYOV9emfhfX+JIVE5QDizDezpzCzDpA==</secretKey>
+      <privateKey>
+        <privateKey>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</privateKey>
+      </privateKey>
+      <instanceCap>2147483647</instanceCap>
+      <templates>
+        <hudson.plugins.ec2.SlaveTemplate>
+          <ami>ami-4118b32a</ami>
+          <description>test oroin slave </description>
+          <zone></zone>
+          <securityGroups></securityGroups>
+          <remoteFS></remoteFS>
+          <type>T2Micro</type>
+          <ebsOptimized>false</ebsOptimized>
+          <labels>oroin-slave</labels>
+          <mode>NORMAL</mode>
+          <initScript></initScript>
+          <tmpDir></tmpDir>
+          <userData></userData>
+          <numExecutors></numExecutors>
+          <remoteAdmin>ec2-user</remoteAdmin>
+          <jvmopts></jvmopts>
+          <subnetId></subnetId>
+          <idleTerminationMinutes>10</idleTerminationMinutes>
+          <iamInstanceProfile></iamInstanceProfile>
+          <useEphemeralDevices>false</useEphemeralDevices>
+          <customDeviceMapping></customDeviceMapping>
+          <instanceCap>2147483647</instanceCap>
+          <stopOnTerminate>false</stopOnTerminate>
+          <usePrivateDnsName>false</usePrivateDnsName>
+          <associatePublicIp>false</associatePublicIp>
+          <useDedicatedTenancy>false</useDedicatedTenancy>
+          <amiType class="hudson.plugins.ec2.UnixData">
+            <rootCommandPrefix></rootCommandPrefix>
+            <sshPort></sshPort>
+          </amiType>
+          <launchTimeout>2147483647</launchTimeout>
+          <connectBySSHProcess>false</connectBySSHProcess>
+          <connectUsingPublicIp>false</connectUsingPublicIp>
+        </hudson.plugins.ec2.SlaveTemplate>
+      </templates>
+      <region>us-east-1</region>
+    </hudson.plugins.ec2.EC2Cloud>
+  </clouds>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
   <views>
