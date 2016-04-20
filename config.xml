@@ -74,6 +74,8 @@
         <assignedSIDs/>
       </role>
     </roleMap>
+    <roleMap type="slaveRoles"/>
+    <roleMap type="projectRoles"/>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>false</disableSignup>
