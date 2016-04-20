@@ -71,9 +71,12 @@
           <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
           <permission>hudson.model.View.Configure</permission>
         </permissions>
-        <assignedSIDs/>
+        <assignedSIDs>
+          <sid>admin</sid>
+        </assignedSIDs>
       </role>
     </roleMap>
+    <roleMap type="slaveRoles"/>
     <roleMap type="projectRoles">
       <role name="dev" pattern="Create&#x9;Delete&#x9;ManageDomains&#x9;Update&#x9;View&#x9;Jobs&#x9;Nodes&#x9;Build&#x9;Cancel&#x9;Configure&#x9;Delete&#x9;Discover&#x9;Read&#x9;Workspace&#x9;Delete&#x9;Update&#x9;Tag">
         <permissions>
