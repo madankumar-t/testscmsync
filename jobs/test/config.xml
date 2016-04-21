@@ -58,16 +58,7 @@ echo &quot; GIT_TAG_MESSAGE $GIT_TAG_MESSAGE&quot;</command>
   </builders>
   <publishers>
     <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.11">
-      <reportTargets>
-        <htmlpublisher.HtmlPublisherTarget>
-          <reportName>HTML Report</reportName>
-          <reportDir></reportDir>
-          <reportFiles>index.html</reportFiles>
-          <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
-          <keepAll>false</keepAll>
-          <allowMissing>false</allowMissing>
-        </htmlpublisher.HtmlPublisherTarget>
-      </reportTargets>
+      <reportTargets/>
     </htmlpublisher.HtmlPublisher>
   </publishers>
   <buildWrappers>
