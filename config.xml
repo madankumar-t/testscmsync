@@ -132,7 +132,7 @@
           <type>T2Micro</type>
           <ebsOptimized>false</ebsOptimized>
           <labels>oroin-slave-test</labels>
-          <mode>NORMAL</mode>
+          <mode>EXCLUSIVE</mode>
           <initScript></initScript>
           <tmpDir></tmpDir>
           <userData></userData>
