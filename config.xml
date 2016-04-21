@@ -140,7 +140,7 @@
           <remoteAdmin>ec2-user</remoteAdmin>
           <jvmopts></jvmopts>
           <subnetId></subnetId>
-          <idleTerminationMinutes>10</idleTerminationMinutes>
+          <idleTerminationMinutes>2</idleTerminationMinutes>
           <iamInstanceProfile></iamInstanceProfile>
           <useEphemeralDevices>false</useEphemeralDevices>
           <customDeviceMapping></customDeviceMapping>
