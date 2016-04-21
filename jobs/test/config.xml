@@ -35,8 +35,8 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:user1</permission>
           <permission>hudson.model.Item.Cancel:user1</permission>
           <permission>hudson.model.Item.Delete:user1</permission>
-          <permission>hudson.model.Run.Update:user1</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:user1</permission>
+          <permission>hudson.model.Run.Update:user1</permission>
         </permissionsMatrix>
       </itemSpecificSecurity>
     </com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty>
@@ -60,7 +60,8 @@
       <org.jenkinsci.plugins.gittagmessage.GitTagMessageExtension plugin="git-tag-message@1.4"/>
     </extensions>
   </scm>
-  <canRoam>true</canRoam>
+  <assignedNode>oroin-slave-test</assignedNode>
+  <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
