@@ -97,23 +97,23 @@
       </role>
     </roleMap>
     <roleMap type="projectRoles">
-      <role name="dev" pattern="Create&#x9;Delete&#x9;ManageDomains&#x9;Update&#x9;View&#x9;Jobs&#x9;Nodes&#x9;Build&#x9;Cancel&#x9;Configure&#x9;Delete&#x9;Discover&#x9;Read&#x9;Workspace&#x9;Delete&#x9;Update&#x9;Tag">
+      <role name="Morpheus" pattern="Morp*">
         <permissions>
+          <permission>hudson.model.Item.Read</permission>
           <permission>hudson.model.Item.Build</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
-          <permission>hudson.model.Item.Cancel</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
+          <permission>hudson.model.Item.Create</permission>
           <permission>hudson.model.Item.Configure</permission>
           <permission>hudson.model.Item.Workspace</permission>
         </permissions>
         <assignedSIDs/>
       </role>
-      <role name="qa" pattern="Create&#x9;Delete&#x9;ManageDomains&#x9;Update&#x9;View&#x9;Jobs&#x9;Nodes&#x9;Build&#x9;Cancel&#x9;Configure&#x9;Delete&#x9;Discover&#x9;Read&#x9;Workspace&#x9;Delete&#x9;Update&#x9;Tag">
+      <role name="Orioin" pattern="Or*">
         <permissions>
           <permission>hudson.model.Item.Read</permission>
           <permission>hudson.model.Item.Build</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Item.Workspace</permission>
         </permissions>
         <assignedSIDs/>
       </role>
