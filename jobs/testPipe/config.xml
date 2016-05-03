@@ -39,7 +39,7 @@
       <jenkins.branch.BranchSource>
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@2.4.2">
           <id>07b11375-392e-4cde-9eb4-23b306141820</id>
-          <remote></remote>
+          <remote>https://github.com/rishav-ranjan/rep_test.git</remote>
           <credentialsId></credentialsId>
           <includes>*</includes>
           <excludes></excludes>
