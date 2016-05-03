@@ -5,119 +5,73 @@
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
-    <roleMap type="globalRoles">
-      <role name="admin" pattern=".*">
-        <permissions>
-          <permission>hudson.scm.SCM.Tag</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
-          <permission>hudson.model.View.Delete</permission>
-          <permission>hudson.model.Computer.Disconnect</permission>
-          <permission>hudson.model.Computer.Configure</permission>
-          <permission>hudson.model.Item.Configure</permission>
-          <permission>hudson.model.Item.Workspace</permission>
-          <permission>hudson.model.View.Create</permission>
-          <permission>hudson.model.Run.Delete</permission>
-          <permission>hudson.model.View.Read</permission>
-          <permission>hudson.model.Hudson.UploadPlugins</permission>
-          <permission>hudson.model.Computer.Connect</permission>
-          <permission>hudson.model.Item.Discover</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
-          <permission>hudson.model.Hudson.Read</permission>
-          <permission>hudson.model.Item.Delete</permission>
-          <permission>hudson.model.View.Configure</permission>
-          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
-          <permission>hudson.model.Hudson.Administer</permission>
-          <permission>hudson.model.Hudson.RunScripts</permission>
-          <permission>hudson.model.Computer.Delete</permission>
-          <permission>hudson.model.Computer.Create</permission>
-          <permission>hudson.model.Item.Create</permission>
-          <permission>hudson.model.Item.Build</permission>
-          <permission>hudson.model.Computer.Build</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
-          <permission>hudson.model.Item.Cancel</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update</permission>
-          <permission>hudson.model.Run.Update</permission>
-        </permissions>
-        <assignedSIDs>
-          <sid>admin</sid>
-        </assignedSIDs>
-      </role>
-      <role name="devops" pattern=".*">
-        <permissions>
-          <permission>hudson.scm.SCM.Tag</permission>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>hudson.model.Computer.Configure</permission>
-          <permission>hudson.model.Hudson.Administer</permission>
-          <permission>hudson.model.Item.Workspace</permission>
-          <permission>hudson.model.Item.Configure</permission>
-          <permission>hudson.model.Hudson.RunScripts</permission>
-          <permission>hudson.model.Computer.Delete</permission>
-          <permission>hudson.model.View.Read</permission>
-          <permission>hudson.model.Computer.Connect</permission>
-          <permission>hudson.model.Computer.Create</permission>
-          <permission>hudson.model.Item.Discover</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
-          <permission>hudson.model.Item.Build</permission>
-          <permission>hudson.model.Item.Create</permission>
-          <permission>hudson.model.Computer.Build</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
-          <permission>hudson.model.Hudson.Read</permission>
-          <permission>hudson.model.Item.Cancel</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
-          <permission>hudson.model.View.Configure</permission>
-        </permissions>
-        <assignedSIDs>
-          <sid>admin</sid>
-        </assignedSIDs>
-      </role>
-      <role name="projectadmin" pattern=".*">
-        <permissions>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>hudson.model.Computer.Configure</permission>
-          <permission>hudson.model.Item.Configure</permission>
-          <permission>hudson.model.Item.Workspace</permission>
-          <permission>hudson.model.Hudson.RunScripts</permission>
-          <permission>hudson.model.View.Create</permission>
-          <permission>hudson.model.View.Read</permission>
-          <permission>hudson.model.Computer.Create</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
-          <permission>hudson.model.Item.Create</permission>
-          <permission>hudson.model.Item.Build</permission>
-          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
-          <permission>hudson.model.Item.Cancel</permission>
-          <permission>hudson.model.Hudson.Read</permission>
-          <permission>hudson.model.View.Configure</permission>
-        </permissions>
-        <assignedSIDs/>
-      </role>
-    </roleMap>
-    <roleMap type="projectRoles">
-      <role name="Morpheus" pattern="Morp*">
-        <permissions>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>hudson.model.Item.Build</permission>
-          <permission>hudson.model.Item.Create</permission>
-          <permission>hudson.model.Item.Configure</permission>
-          <permission>hudson.model.Item.Workspace</permission>
-        </permissions>
-        <assignedSIDs/>
-      </role>
-      <role name="Orioin" pattern="Or*">
-        <permissions>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>hudson.model.Item.Build</permission>
-          <permission>hudson.model.Item.Create</permission>
-          <permission>hudson.model.Item.Configure</permission>
-          <permission>hudson.model.Item.Workspace</permission>
-        </permissions>
-        <assignedSIDs/>
-      </role>
-    </roleMap>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:Admin</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:rishav-ranjan </permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:Admin</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:rishav-ranjan </permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:Admin</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:rishav-ranjan </permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:Admin</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:rishav-ranjan </permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:Admin</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:rishav-ranjan </permission>
+    <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs:Admin</permission>
+    <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs:rishav-ranjan </permission>
+    <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes:Admin</permission>
+    <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes:rishav-ranjan </permission>
+    <permission>hudson.model.Computer.Build:Admin</permission>
+    <permission>hudson.model.Computer.Build:rishav-ranjan </permission>
+    <permission>hudson.model.Computer.Configure:Admin</permission>
+    <permission>hudson.model.Computer.Configure:rishav-ranjan </permission>
+    <permission>hudson.model.Computer.Connect:Admin</permission>
+    <permission>hudson.model.Computer.Connect:rishav-ranjan </permission>
+    <permission>hudson.model.Computer.Create:Admin</permission>
+    <permission>hudson.model.Computer.Create:rishav-ranjan </permission>
+    <permission>hudson.model.Computer.Delete:Admin</permission>
+    <permission>hudson.model.Computer.Delete:rishav-ranjan </permission>
+    <permission>hudson.model.Computer.Disconnect:Admin</permission>
+    <permission>hudson.model.Computer.Disconnect:rishav-ranjan </permission>
+    <permission>hudson.model.Hudson.Administer:Admin</permission>
+    <permission>hudson.model.Hudson.Administer:rishav-ranjan </permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:Admin</permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:rishav-ranjan </permission>
+    <permission>hudson.model.Hudson.Read:Admin</permission>
+    <permission>hudson.model.Hudson.Read:rishav-ranjan </permission>
+    <permission>hudson.model.Hudson.RunScripts:Admin</permission>
+    <permission>hudson.model.Hudson.RunScripts:rishav-ranjan </permission>
+    <permission>hudson.model.Hudson.UploadPlugins:Admin</permission>
+    <permission>hudson.model.Hudson.UploadPlugins:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Build:Admin</permission>
+    <permission>hudson.model.Item.Build:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Cancel:Admin</permission>
+    <permission>hudson.model.Item.Cancel:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Configure:Admin</permission>
+    <permission>hudson.model.Item.Configure:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Create:Admin</permission>
+    <permission>hudson.model.Item.Create:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Delete:Admin</permission>
+    <permission>hudson.model.Item.Delete:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Discover:Admin</permission>
+    <permission>hudson.model.Item.Discover:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Read:Admin</permission>
+    <permission>hudson.model.Item.Read:rishav-ranjan </permission>
+    <permission>hudson.model.Item.Workspace:Admin</permission>
+    <permission>hudson.model.Item.Workspace:rishav-ranjan </permission>
+    <permission>hudson.model.Run.Delete:Admin</permission>
+    <permission>hudson.model.Run.Delete:rishav-ranjan </permission>
+    <permission>hudson.model.Run.Update:Admin</permission>
+    <permission>hudson.model.Run.Update:rishav-ranjan </permission>
+    <permission>hudson.model.View.Configure:Admin</permission>
+    <permission>hudson.model.View.Configure:rishav-ranjan </permission>
+    <permission>hudson.model.View.Create:Admin</permission>
+    <permission>hudson.model.View.Create:rishav-ranjan </permission>
+    <permission>hudson.model.View.Delete:Admin</permission>
+    <permission>hudson.model.View.Delete:rishav-ranjan </permission>
+    <permission>hudson.model.View.Read:Admin</permission>
+    <permission>hudson.model.View.Read:rishav-ranjan </permission>
+    <permission>hudson.scm.SCM.Tag:Admin</permission>
+    <permission>hudson.scm.SCM.Tag:rishav-ranjan </permission>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>false</disableSignup>
