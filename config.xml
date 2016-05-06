@@ -107,7 +107,9 @@
           <permission>hudson.model.Item.Configure</permission>
           <permission>hudson.model.Item.Workspace</permission>
         </permissions>
-        <assignedSIDs/>
+        <assignedSIDs>
+          <sid>user3</sid>
+        </assignedSIDs>
       </role>
       <role name="OrionDeveloper" pattern="Oro*">
         <permissions>
