@@ -89,6 +89,32 @@
         <assignedSIDs/>
       </role>
     </roleMap>
+    <roleMap type="projectRoles">
+      <role name="MorpheusDeveloper" pattern="Mor*">
+        <permissions>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+        </permissions>
+        <assignedSIDs/>
+      </role>
+      <role name="OrionDeveloper" pattern="Oro*">
+        <permissions>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+        </permissions>
+        <assignedSIDs/>
+      </role>
+    </roleMap>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>false</disableSignup>
