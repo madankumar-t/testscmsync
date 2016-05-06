@@ -96,16 +96,8 @@
       </role>
     </roleMap>
     <roleMap type="projectRoles">
-      <role name="MorpheusDeveloper" pattern="Mor*">
-        <permissions>
-          <permission>hudson.scm.SCM.Tag</permission>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>hudson.model.Item.Build</permission>
-          <permission>hudson.model.Item.Create</permission>
-          <permission>hudson.model.Run.Replay</permission>
-          <permission>hudson.model.Item.Configure</permission>
-          <permission>hudson.model.Item.Workspace</permission>
-        </permissions>
+      <role name="MorpheusDeveloper" pattern="Mor* | Mtest*">
+        <permissions/>
         <assignedSIDs>
           <sid>user3</sid>
         </assignedSIDs>
