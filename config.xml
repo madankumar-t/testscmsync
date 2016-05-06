@@ -95,7 +95,6 @@
         </assignedSIDs>
       </role>
     </roleMap>
-    <roleMap type="slaveRoles"/>
     <roleMap type="projectRoles">
       <role name="MorpheusDeveloper" pattern="Mor*">
         <permissions>
