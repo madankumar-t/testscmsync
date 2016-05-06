@@ -28,18 +28,17 @@
           <permission>hudson.model.Hudson.Read</permission>
           <permission>hudson.model.Item.Delete</permission>
           <permission>hudson.model.View.Configure</permission>
-          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
           <permission>hudson.model.Item.Read</permission>
-          <permission>hudson.model.Item.Move</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
+          <permission>hudson.model.Item.Move</permission>
           <permission>hudson.model.Hudson.Administer</permission>
           <permission>hudson.model.Computer.Delete</permission>
           <permission>hudson.model.Hudson.RunScripts</permission>
           <permission>hudson.model.Computer.Create</permission>
           <permission>hudson.model.Item.Create</permission>
           <permission>hudson.model.Item.Build</permission>
-          <permission>hudson.model.Computer.Build</permission>
           <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
+          <permission>hudson.model.Computer.Build</permission>
           <permission>hudson.model.Item.Cancel</permission>
           <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update</permission>
@@ -48,6 +47,46 @@
         <assignedSIDs>
           <sid>anonymous</sid>
         </assignedSIDs>
+      </role>
+      <role name="devops" pattern=".*">
+        <permissions>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Computer.Configure</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
+          <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Hudson.UploadPlugins</permission>
+          <permission>hudson.model.Computer.Create</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Computer.Build</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.View.Configure</permission>
+        </permissions>
+        <assignedSIDs/>
+      </role>
+      <role name="projectadmin" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.RunScripts</permission>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.View.Configure</permission>
+        </permissions>
+        <assignedSIDs/>
       </role>
     </roleMap>
   </authorizationStrategy>
